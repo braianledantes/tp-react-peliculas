@@ -1,0 +1,14 @@
+.outlinedbutton {
+    background-color: transparent;
+    color: #e2e2e2;
+    border: 2px solid #8a0000;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.outlinedbutton:hover {
+    background-color: #8a000022;
+    transition: all 0.3s ease;
+}

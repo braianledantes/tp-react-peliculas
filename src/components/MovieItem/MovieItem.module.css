@@ -1,0 +1,40 @@
+.movieItem {
+    border: 1px solid #292929;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.movieItem img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.movieDetails {
+    padding: 0 16px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.movieTitle {
+    margin: 8px;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+.movieDetail {
+    color: #464646;
+    font-weight: 500;
+}
+
+.movieItem:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
