@@ -7,6 +7,7 @@ import Title from "../../components/Title/Title"
 import SortAndFiltersOptions from "../../components/SortAndFiltersOptions/SortAndFiltersOptions";
 import AddMovieForm from "../../components/AddMovieForm/AddMovieForm";
 import EditMovieForm from "../../components/EditMovieForm/EditMovieForm";
+import Button from "../../components/Button/Button";
 
 export default function Home() {
     const { movies, addMovie, removeMovie, updateMovie } = useMovies()
@@ -21,8 +22,6 @@ export default function Home() {
 
     const handleFilterChange = (filters) => {
         const { seen, search, genre, type, sortBy, sortType } = filters
-        console.log("Filters:", filters)
-        console.log("Movies:", movies)
         
         const filteredMovies = movies.filter((movie) => {
             return (movie.title.toLowerCase().includes(search.toLowerCase()) || movie.director.toLowerCase().includes(search.toLowerCase())) &&
@@ -40,8 +39,6 @@ export default function Home() {
             return 0
         })
         setFilteredMovies(sortedMovies)
-        console.log("Filtered movies:", filteredMovies)
-        console.log("Sorted movies:", sortedMovies)
     }
 
     const handleClickViewMovie = (id) => {
@@ -79,12 +76,17 @@ export default function Home() {
                 <MovieList movies={filteredMovies} onClickMovie={handleClickViewMovie} />
             ) : (
                 <div className={styles.emptyMovies}>
-                    <h2>No hay peliculas ni series</h2>
+                    <h2>No hay películas ni series</h2>
                 </div>
             )}
 
-            <SortAndFiltersOptions onFilterChange={handleFilterChange} />
-            <button className={styles.addMovieButton} onClick={showAddMovieForm}><Plus /></button>
+            <aside>
+                <SortAndFiltersOptions onFilterChange={handleFilterChange} />
+                <div className="counter">
+                    <strong>Cantidad: {filteredMovies.length}</strong>
+                </div>
+                <Button onClick={showAddMovieForm} text="Añadir película o serie" />
+            </aside>
         </section>
     )
 }
