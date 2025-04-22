@@ -52,5 +52,5 @@ pierdan al actualizar la página.
 
   3.2: Abrimos el navegador y visitamos la url: 
   
-![Abrir]([https://github.com/braianledantes/tp-react-peliculas/blob/main/src/imagenes/run%20dev.png](https://github.com/braianledantes/tp-react-peliculas/blob/main/src/imagenes/run%20dev.png))
+![Abrir](https://github.com/braianledantes/tp-react-peliculas/blob/main/src/imagenes/webBraian.png)
 
