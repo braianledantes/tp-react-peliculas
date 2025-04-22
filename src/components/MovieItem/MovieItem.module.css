@@ -43,7 +43,7 @@
 }
 
 .movieItem:hover img {
-    filter: brightness(1.2); /
+    filter: brightness(1.2);
 }
 
 .movieItem:hover .movieTitle {
