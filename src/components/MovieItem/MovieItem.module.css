@@ -3,12 +3,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .movieItem img {
     width: 100%;
     aspect-ratio: 2/3;
     object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .movieDetails {
@@ -35,7 +37,15 @@
 .movieItem:hover {
     cursor: pointer;
     background: #1a1a1a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid #8a0000;
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); 
+    border: 1px solid #ff0000; 
+    transform: scale(1.05); 
+}
+
+.movieItem:hover img {
+    filter: brightness(1.2); /
+}
+
+.movieItem:hover .movieTitle {
+    color: #ffffff; 
 }
