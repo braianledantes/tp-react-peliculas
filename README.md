@@ -36,19 +36,19 @@ pierdan al actualizar la página.
 ## Guia de instalación:
 - **1.** Clonar el repositorio.
 
-![ClonarRepo]()
+![ClonarRepo](https://github.com/braianledantes/tp-react-peliculas/blob/main/src/imagenes/clonar%20repo.png)
 
 
 - **2.** Instalar las dependencias.
   
-![Instalar]()
+![Instalar](https://github.com/braianledantes/tp-react-peliculas/blob/main/src/imagenes/install.png)
 
 - **3.** Ejecutar la aplicación.
   
   3.1: Iniciamos el servidor de desarrollo con el siguiente comando:
   
-![Correr]()
+![Correr](https://github.com/braianledantes/tp-react-peliculas/blob/main/src/imagenes/run%20dev.png)
   3.2: Abrimos el navegador y visitamos la url: 
   
-![Abrir]()
+![Abrir](https://github.com/braianledantes/tp-react-peliculas/blob/main/src/imagenes/run%20dev.png)
 
