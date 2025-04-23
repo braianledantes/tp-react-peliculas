@@ -114,7 +114,7 @@ export default function Home() {
 
             <aside>
                 <Search search={search} onSearch={handleSearch} />
-                <SortOptions sortOptions={initialSortOptions} onSortChange={handleSortChange} />
+                <SortOptions sortOptions={sortOptions} onSortChange={handleSortChange} />
                 <FilterOptions filters={filters} onFilterChange={handleFilterChange} />
                 <div className="counter">
                     <strong>Cantidad: {filteredMovies.length}</strong>
