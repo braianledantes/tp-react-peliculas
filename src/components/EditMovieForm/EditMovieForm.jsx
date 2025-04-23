@@ -1,10 +1,10 @@
-import { useState } from "react";
+import {useState} from "react";
 import Button from "../Button/Button";
 import OutlinedButton from "../OutlinedButton.jsx/OutlinedButton";
 import styles from "./EditMovieForm.module.css";
 import ConfirmDialog from "../ConfirmDialog/ConfirmDialog";
 
-export default function EditMovieForm({ movie, onSaveMovie, onDeleteMovie, onClose }) {
+export default function EditMovieForm({movie, onSaveMovie, onDeleteMovie, onClose}) {
     const [imgUrl, setImgUrl] = useState(movie.image);
     const [deleteDialog, setDeleteDialog] = useState(false);
     const [saveDialog, setSaveDialog] = useState(false);
@@ -55,7 +55,9 @@ export default function EditMovieForm({ movie, onSaveMovie, onDeleteMovie, onClo
 
     return (
         <>
-            {deleteDialog && (<ConfirmDialog title="Eliminar" message="¿Desea eliminar esta película?" onConfirm={handleDeleteMovie} onCancel={handleCancelDelete}/>)}
+            {deleteDialog && (
+                <ConfirmDialog title="Eliminar" message="¿Desea eliminar esta película?" onConfirm={handleDeleteMovie}
+                               onCancel={handleCancelDelete}/>)}
 
             <div className={styles.editMovie} onClick={onClose}>
                 <div className={styles.editMovieForm} onClick={(e) => e.stopPropagation()}>
@@ -64,16 +66,17 @@ export default function EditMovieForm({ movie, onSaveMovie, onDeleteMovie, onClo
                     </h2>
                     <form onSubmit={handleSaveMovie}>
                         <label htmlFor="title">Título:</label>
-                        <input type="text" id="title" name="title" defaultValue={movie.title} required />
+                        <input type="text" id="title" name="title" defaultValue={movie.title} required/>
                         <label htmlFor="image">Imagen:</label>
-                        <input type="url" id="image" name="image" defaultValue={movie.image} required onChange={handleImageChange}/>
+                        <input type="url" id="image" name="image" defaultValue={movie.image} required
+                               onChange={handleImageChange}/>
                         <label htmlFor="type">Tipo:</label>
                         <select id="type" name="type" required defaultValue={movie.type}>
                             <option value="Película">Película</option>
                             <option value="Serie">Serie</option>
                         </select>
                         <label htmlFor="director">Director:</label>
-                        <input type="text" id="director" name="director" defaultValue={movie.director} required />
+                        <input type="text" id="director" name="director" defaultValue={movie.director} required/>
                         <label htmlFor="genre">Género:</label>
                         <select id="genre" name="genre" defaultValue={movie.genre} required>
                             <option value="Acción">Acción</option>
@@ -89,20 +92,22 @@ export default function EditMovieForm({ movie, onSaveMovie, onDeleteMovie, onClo
                             <option value="Aventura">Aventura</option>
                         </select>
                         <label htmlFor="year">Año:</label>
-                        <input type="number" id="year" name="year" min="1900" defaultValue={movie.year} required />
+                        <input type="number" id="year" name="year" min="1900" defaultValue={movie.year} required/>
                         <label htmlFor="rating">Rating:</label>
-                        <input type="range" id="rating" name="rating" min="1" max="5" defaultValue={movie.rating}  required />
+                        <input type="range" id="rating" name="rating" min="1" max="5" defaultValue={movie.rating}
+                               required/>
                         <label htmlFor="seen">¿La viste?</label>
-                        <input type="checkbox" name="seen" id="seen" defaultChecked={movie.seen} />
-                        <Button text="Guardar" onClick={showSaveDialog} />
-                        <Button text="Eliminar" onClick={showDeleteDialog} />
-                        <OutlinedButton text="Volver" onClick={onClose} />
+                        <input type="checkbox" name="seen" id="seen" defaultChecked={movie.seen}/>
+                        <Button text="Guardar" onClick={showSaveDialog}/>
+                        <Button text="Eliminar" onClick={showDeleteDialog}/>
+                        <OutlinedButton text="Volver" onClick={onClose}/>
 
                         {saveDialog && (
-                            <ConfirmDialog title="Guardar" message="¿Desea guardar los cambios?" onConfirm={handleSaveMovie} onCancel={handleCancelSave}/>
+                            <ConfirmDialog title="Guardar" message="¿Desea guardar los cambios?"
+                                           onConfirm={handleSaveMovie} onCancel={handleCancelSave}/>
                         )}
                     </form>
-                    <img src={imgUrl} alt={movie.title} className={styles.movieImage} />
+                    <img src={imgUrl} alt={movie.title} className={styles.movieImage}/>
                 </div>
             </div>
         </>

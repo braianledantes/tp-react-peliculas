@@ -35,28 +35,28 @@
         aspect-ratio: 3 / 5;
         object-fit: cover;
     }
-    
+
     button {
         grid-column: 1 / -1;
     }
-    
+
     form {
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 16px;
     }
-    
+
     form label {
         display: flex;
         justify-content: right;
         align-items: center;
     }
-    
+
     form input,
     form select {
         padding: 8px;
     }
-    
+
     form input[type="checkbox"] {
         width: 24px;
         justify-self: start;

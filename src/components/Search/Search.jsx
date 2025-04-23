@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Search.module.css';
-import { SearchIcon } from 'lucide-react';
+import {SearchIcon} from 'lucide-react';
 
-export default function Search({ value, onSearch }) {
+export default function Search({value, onSearch}) {
     const handleSearch = (e) => {
         e.preventDefault();
         onSearch(e.target[0].value);
@@ -15,7 +15,7 @@ export default function Search({ value, onSearch }) {
                 placeholder="Ingresa tu búsqueda"
                 value={value}
             />
-            <button><SearchIcon /></button>
+            <button><SearchIcon/></button>
         </form>
     );
 }
