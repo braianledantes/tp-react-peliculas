@@ -113,7 +113,7 @@ export default function Home() {
             )}
 
             <aside>
-                <Search value={search} onSearch={handleSearch} />
+                <Search search={search} onSearch={handleSearch} />
                 <SortOptions sortOptions={initialSortOptions} onSortChange={handleSortChange} />
                 <FilterOptions filters={filters} onFilterChange={handleFilterChange} />
                 <div className="counter">
