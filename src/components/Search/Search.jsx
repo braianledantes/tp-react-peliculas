@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Search.module.css';
-import { SearchCode, SearchIcon, SearchSlash } from 'lucide-react';
+import { SearchIcon } from 'lucide-react';
 
 export default function Search({ value, onSearch }) {
     const handleSearch = (e) => {
