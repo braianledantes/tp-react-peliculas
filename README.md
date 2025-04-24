@@ -1,3 +1,24 @@
+Correcciones:
+
+- Hermosa UI. Muy clean y las animaciones quedaron bellisimas.
+- Buena implememtacion del useMovies.
+- Buen uso de constantes en /data
+- Excelente uso de componentes, estructura de carpetas ordenada.
+- integración con localStorage bien manejada.
+- el codigo es limpio, legible y modular, buen laburo.
+
+
+
+
+Cosas a mejorar:
+- Pequenos detalles de programacion. 
+
+No hay mucho mas para comentar. Gran Trabajo.
+
+Nota: 10
+
+
+
 # Trabajo Práctico React
 
 ## Miembros del Grupo N°2

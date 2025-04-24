@@ -56,6 +56,7 @@ export default function AddMovie({onAddMovie, onClose}) {
                         <option value="Ciencia Ficción">Ciencia Ficción</option>
                         <option value="Romance">Romance</option>
                         <option value="Suspenso">Suspenso</option>
+                        {/* que paso aca?? */}
                         <option value="fantFantasíaasy">Fantasía</option>
                         <option value="Documental">Documental</option>
                         <option value="Animación">Animación</option>
@@ -64,6 +65,7 @@ export default function AddMovie({onAddMovie, onClose}) {
                     <label htmlFor="year">Año:</label>
                     <input type="number" id="year" name="year" min="1900" required/>
                     <label htmlFor="rating">Rating:</label>
+                    {/* No puedo ponerle 0 a blancanieves? :) */}
                     <input type="range" id="rating" name="rating" min="1" max="5" required/>
                     <label htmlFor="seen">¿La viste?</label>
                     <input type="checkbox" name="seen" id="seen"/>

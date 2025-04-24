@@ -14,6 +14,7 @@ export default function MovieItem({movie, onClick}) {
             <img src={movie.image}/>
             <h2 className={styles.movieTitle}>{movie.title}</h2>
             <div className={styles.movieDetails}>
+                {/* Esto de aca abajo deberia ser un componente. Fijense como usa siempre el mismo style y cambia solamente el texto */}
                 <p><span className={styles.movieDetail}>Tipo: </span>{movie.type}</p>
                 <p><span className={styles.movieDetail}>Director: </span>{movie.director}</p>
                 <p><span className={styles.movieDetail}>Género: </span>{movie.genre}</p>
