@@ -6,6 +6,8 @@ import ConfirmDialog from "../ConfirmDialog/ConfirmDialog";
 
 export default function EditMovieForm({movie, onSaveMovie, onDeleteMovie, onClose}) {
     const [imgUrl, setImgUrl] = useState(movie.image);
+    //Muy menor, pero pernse qeu deleteDialog era un componente y es un boolean
+    // Podrian llamarlo showDeleteDialog o similar
     const [deleteDialog, setDeleteDialog] = useState(false);
     const [saveDialog, setSaveDialog] = useState(false);
 
